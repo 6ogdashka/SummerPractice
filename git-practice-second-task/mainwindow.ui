@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>950</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Конструктор Trigonometric функций</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="controlLayout">
+      <item>
+       <widget class="QLabel" name="labelImageFile">
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="formLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="lbl1">
+          <property name="text">
+           <string>Тип функции:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="comboBoxType">
+          <item>
+           <property name="text">
+            <string>sin</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>cos</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>tan</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="lbl2">
+          <property name="text">
+           <string>Амплитуда (A):</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="lineEditAmp">
+          <property name="text">
+           <string>1.0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="lbl3">
+          <property name="text">
+           <string>Частота (B):</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="lineEditFreq">
+          <property name="text">
+           <string>1.0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="lbl4">
+          <property name="text">
+           <string>Стиль линии:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QComboBox" name="comboBoxStyle">
+          <item>
+           <property name="text">
+            <string>Сплошная</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Штриховая</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Пунктирная</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="lbl5">
+          <property name="text">
+           <string>Толщина:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QSlider" name="sliderThickness">
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>10</number>
+          </property>
+          <property name="value">
+           <number>2</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnAdd">
+        <property name="text">
+         <string>Добавить функцию</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnDelete">
+        <property name="text">
+         <string>Удалить выбранную</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="lblPresets">
+        <property name="text">
+         <string>Математические пресеты (QListView):</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QListView" name="listViewPresets">
+       </widget>
+      </item>
+      <item>
+       <widget class="QListWidget" name="listWidget">
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="graphLayout">
+      <item>
+       <widget class="QLabel" name="labelGraph">
+        <property name="minimumSize">
+         <size>
+          <width>500</width>
+          <height>350</height>
+         </size>
+        </property>
+        <property name="text">
+         <string></string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="scrollLayout">
+        <item>
+         <widget class="QLabel" name="lblZoom">
+          <property name="text">
+           <string>Масштаб графика (Зум):</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QScrollBar" name="scrollBarZoom">
+          <property name="minimum">
+           <number>10</number>
+          </property>
+          <property name="maximum">
+           <number>200</number>
+          </property>
+          <property name="value">
+           <number>50</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="tableWidget">
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnPlot">
+        <property name="text">
+         <string>ВЫВЕСТИ ГРАФИК (-4π до 4π)</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
