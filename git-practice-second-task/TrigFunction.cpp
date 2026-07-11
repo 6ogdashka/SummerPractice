@@ -2,26 +2,24 @@
 #include <cmath>
 
 TrigFunction::TrigFunction()
-    : m_type("sin"), m_amplitude(1.0), m_frequency(1.0), m_color(Qt::blue), m_thickness(2), m_style(Qt::SolidLine)
+    : m_type("sin"), m_multiplier(1), m_color(Qt::blue), m_style(Qt::SolidLine)
 {
 }
 
-TrigFunction::TrigFunction(const QString& type, double amplitude, double frequency, const QColor& color, int thickness, Qt::PenStyle style)
-    : m_type(type), m_amplitude(amplitude), m_frequency(frequency), m_color(color), m_thickness(thickness), m_style(style)
+TrigFunction::TrigFunction(const QString& type, int multiplier, const QColor& color, Qt::PenStyle style)
+    : m_type(type), m_multiplier(multiplier), m_color(color), m_style(style)
 {
 }
 
 QString TrigFunction::getType() const { return m_type; }
-double TrigFunction::getAmplitude() const { return m_amplitude; }
-double TrigFunction::getFrequency() const { return m_frequency; }
+int TrigFunction::getMultiplier() const { return m_multiplier; }
 QColor TrigFunction::getColor() const { return m_color; }
-int TrigFunction::getThickness() const { return m_thickness; }
 Qt::PenStyle TrigFunction::getStyle() const { return m_style; }
 
 double TrigFunction::evaluate(double x) const
 {
-    if (m_type == "sin") return m_amplitude * std::sin(m_frequency * x);
-    if (m_type == "cos") return m_amplitude * std::cos(m_frequency * x);
-    if (m_type == "tan") return m_amplitude * std::tan(m_frequency * x);
+    if (m_type == "sin") return std::sin(m_multiplier * x);
+    if (m_type == "cos") return std::cos(m_multiplier * x);
+    if (m_type == "tan") return std::tan(m_multiplier * x);
     return 0.0;
 }

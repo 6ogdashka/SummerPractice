@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Конструктор Trigonometric функций</string>
+   <string>Простые Графики (Упрощено)</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -45,48 +45,57 @@
         <item row="0" column="1">
          <widget class="QComboBox" name="comboBoxType">
           <item>
-           <property name="text">
-            <string>sin</string>
-           </property>
+           <property name="text"><string>sin</string></property>
           </item>
           <item>
-           <property name="text">
-            <string>cos</string>
-           </property>
+           <property name="text"><string>cos</string></property>
           </item>
           <item>
-           <property name="text">
-            <string>tan</string>
-           </property>
+           <property name="text"><string>tan</string></property>
           </item>
          </widget>
         </item>
         <item row="1" column="0">
          <widget class="QLabel" name="lbl2">
           <property name="text">
-           <string>Амплитуда (A):</string>
+           <string>Угол:</string>
           </property>
          </widget>
         </item>
         <item row="1" column="1">
-         <widget class="QLineEdit" name="lineEditAmp">
-          <property name="text">
-           <string>1.0</string>
-          </property>
+         <widget class="QComboBox" name="comboBoxMultiplier">
+          <item>
+           <property name="text"><string>x</string></property>
+          </item>
+          <item>
+           <property name="text"><string>2x</string></property>
+          </item>
+          <item>
+           <property name="text"><string>3x</string></property>
+          </item>
          </widget>
         </item>
         <item row="2" column="0">
          <widget class="QLabel" name="lbl3">
           <property name="text">
-           <string>Частота (B):</string>
+           <string>Цвет:</string>
           </property>
          </widget>
         </item>
         <item row="2" column="1">
-         <widget class="QLineEdit" name="lineEditFreq">
-          <property name="text">
-           <string>1.0</string>
-          </property>
+         <widget class="QComboBox" name="comboBoxColor">
+          <item>
+           <property name="text"><string>Красный</string></property>
+          </item>
+          <item>
+           <property name="text"><string>Синий</string></property>
+          </item>
+          <item>
+           <property name="text"><string>Зеленый</string></property>
+          </item>
+          <item>
+           <property name="text"><string>Черный</string></property>
+          </item>
          </widget>
         </item>
         <item row="3" column="0">
@@ -99,43 +108,14 @@
         <item row="3" column="1">
          <widget class="QComboBox" name="comboBoxStyle">
           <item>
-           <property name="text">
-            <string>Сплошная</string>
-           </property>
+           <property name="text"><string>Сплошная</string></property>
           </item>
           <item>
-           <property name="text">
-            <string>Штриховая</string>
-           </property>
+           <property name="text"><string>Штриховая</string></property>
           </item>
           <item>
-           <property name="text">
-            <string>Пунктирная</string>
-           </property>
+           <property name="text"><string>Пунктирная</string></property>
           </item>
-         </widget>
-        </item>
-        <item row="4" column="0">
-         <widget class="QLabel" name="lbl5">
-          <property name="text">
-           <string>Толщина:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="1">
-         <widget class="QSlider" name="sliderThickness">
-          <property name="minimum">
-           <number>1</number>
-          </property>
-          <property name="maximum">
-           <number>10</number>
-          </property>
-          <property name="value">
-           <number>2</number>
-          </property>
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
          </widget>
         </item>
        </layout>
@@ -157,17 +137,15 @@
       <item>
        <widget class="QLabel" name="lblPresets">
         <property name="text">
-         <string>Математические пресеты (QListView):</string>
+         <string>Математические пресеты:</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QListView" name="listViewPresets">
-       </widget>
+       <widget class="QListView" name="listViewPresets"/>
       </item>
       <item>
-       <widget class="QListWidget" name="listWidget">
-       </widget>
+       <widget class="QListWidget" name="listWidget"/>
       </item>
      </layout>
     </item>
@@ -182,7 +160,7 @@
          </size>
         </property>
         <property name="text">
-         <string></string>
+         <string/>
         </property>
        </widget>
       </item>
@@ -191,7 +169,7 @@
         <item>
          <widget class="QLabel" name="lblZoom">
           <property name="text">
-           <string>Масштаб графика (Зум):</string>
+           <string>Масштаб (Зум):</string>
           </property>
          </widget>
         </item>
@@ -214,8 +192,7 @@
        </layout>
       </item>
       <item>
-       <widget class="QTableWidget" name="tableWidget">
-       </widget>
+       <widget class="QTableWidget" name="tableWidget"/>
       </item>
       <item>
        <widget class="QPushButton" name="btnPlot">
